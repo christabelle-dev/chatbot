@@ -22,6 +22,9 @@ if not api_key:
 # Set environment variable
 os.environ["GOOGLE_API_KEY"] = api_key
 
+subjects = ["Maths", "English", "Biology"]
+
+st.sidebar.selectbox(subjects)
 # Initialize Gemini
 local_llm = ChatGoogleGenerativeAI(
     model="gemini-2.0-flash-exp",
